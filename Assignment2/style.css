@@ -1,0 +1,312 @@
+/* -------------------------------------------------------
+   Little Kitchen Player
+   Context: cooking tutorial media player
+
+   This visual design uses warm cream, brown and soft orange
+   colours to create a small home-kitchen feeling. The layout
+   is designed like a recipe card, so the user can watch the
+   cooking video, jump to key cooking steps, check ingredients,
+   and use a timer while following the tutorial.
+------------------------------------------------------- */
+
+/* ---------------- General page style ---------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff8ef;
+  color: #4b2f22;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------- Header ---------------- */
+
+.site-header {
+  text-align: center;
+  padding: 56px 20px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-header .subtitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #c98d70;
+  margin: 0 0 10px;
+  font-weight: 800;
+}
+
+.site-header h1 {
+  font-size: 4.2rem;
+  line-height: 1;
+  color: #c98d70;
+  margin: 0 0 14px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.site-header p {
+  font-size: 1.1rem;
+  color: #9d6f59;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---------------- Cooking tools section ---------------- */
+
+.cooking-tools {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.tool-card {
+  background: #fffdf8;
+  border: 2px solid #4b2f22;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(75, 47, 34, 0.08);
+}
+
+.tool-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+  color: #6b402e;
+}
+
+.tool-intro {
+  margin: 0 0 14px;
+  color: #a06f58;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.tool-card label {
+  display: block;
+  margin: 8px 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.tool-card input {
+  accent-color: #c98d70;
+  margin-right: 6px;
+}
+
+/* ---------------- Timer section ---------------- */
+
+.timer-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.timer-buttons button {
+  padding: 10px 14px;
+}
+
+#timer-display {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #4b2f22;
+  margin: 12px 0 4px;
+}
+
+#timer-message {
+  color: #c94f5f;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ---------------- Main player card ---------------- */
+
+main.double-border {
+  max-width: 900px;
+  margin: 20px auto 40px;
+  background: #fffdf8;
+  border: 3px solid #4b2f22;
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 18px 40px rgba(75, 47, 34, 0.14);
+}
+
+/* ---------------- Video screen ---------------- */
+
+.main-screen {
+  width: 100%;
+  background: #2b1b14;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #4b2f22;
+}
+
+#my-video {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+}
+
+/* ---------------- Control bar ---------------- */
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 16px 8px 8px;
+  border-top: 2px solid #4b2f22;
+  margin-top: 16px;
+}
+
+#step-message {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #8f5f45;
+  background-color: #fff3e6;
+  border: 2px solid #e5c9b7;
+  border-radius: 999px;
+  width: fit-content;
+  margin: 8px auto 16px;
+  padding: 8px 18px;
+}
+
+/* ---------------- Buttons ---------------- */
+
+.double-border {
+  background: #fff8ef;
+  border: 3px double #4b2f22;
+  border-radius: 14px;
+  color: #2f1b12;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button.double-border {
+  min-height: 42px;
+  padding: 8px 12px;
+}
+
+button.double-border:hover {
+  background: #f4d8c3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(75, 47, 34, 0.18);
+}
+
+button.double-border:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+button img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* ---------------- Cooking step buttons ---------------- */
+
+#step1-button,
+#step2-button,
+#step3-button,
+#step4-button {
+  background: #fff1df;
+  color: #4b2f22;
+}
+
+#step1-button:hover,
+#step2-button:hover,
+#step3-button:hover,
+#step4-button:hover {
+  background: #f2c8a8;
+}
+
+/* ---------------- Progress bar ---------------- */
+
+#progress-bar-container {
+  width: 170px;
+  height: 10px;
+  background: #e4cdbd;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0 6px;
+}
+
+#progress-bar {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: #c98d70;
+  border-radius: 999px;
+}
+
+/* ---------------- Like count ---------------- */
+
+#likes {
+  min-width: 20px;
+  font-weight: bold;
+  color: #c94f5f;
+}
+
+/* ---------------- Footer ---------------- */
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #9d6f59;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #c98d70;
+}
+
+/* ---------------- Responsive layout ---------------- */
+
+@media screen and (max-width: 800px) {
+  .site-header {
+    padding: 36px 16px 22px;
+  }
+
+  .site-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .site-header p {
+    font-size: 1rem;
+  }
+
+  .cooking-tools {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  main.double-border {
+    margin: 16px;
+    padding: 12px;
+  }
+
+  .controls {
+    gap: 8px;
+  }
+
+  button.double-border {
+    min-height: 38px;
+    padding: 7px 10px;
+  }
+
+  #progress-bar-container {
+    width: 130px;
+  }
+}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <!-- Header introduces the theme and purpose of the website -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Kitchen Player</title>
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <p class="subtitle">Interactive Cooking Tutorial</p>
+      <h1>Little Kitchen Player</h1>
+      <p>Follow each cooking step while watching the recipe video.</p>
+    </header>
+
+    <!-- Main media player section -->
+    <main class="double-border">
+      <div class="main-screen">
+        <video src="cooking.mp4" id="my-video"></video>
+      </div>
+      <!-- Custom video controls designed for the cooking tutorial context -->
+      <div class="controls">
+        <button id="play-pause-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/play--v2.png"
+            alt="play button"
+            id="play-pause-img"
+          />
+        </button>
+
+        <button id="mute-unmute-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
+            alt="mute button"
+            id="mute-unmute-img"
+          />
+        </button>
+
+        <button id="fast-forward-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/fast-forward.png"
+            alt="fast forward button"
+            id="fast-forward-img"
+          />
+        </button>
+
+        <!-- Step buttons allow users to jump to important cooking actions in the video -->
+        <button id="step1-button" class="double-border">Oil</button>
+        <button id="step2-button" class="double-border">Chicken</button>
+        <button id="step3-button" class="double-border">Season</button>
+        <button id="step4-button" class="double-border">Flip</button>
+
+        <!-- Progress bar gives visual feedback on how much of the video has played -->
+        <div id="progress-bar-container">
+          <span id="progress-bar"></span>
+        </div>
+
+        <button id="fullscreen-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/full-screen--v1.png"
+            alt="fullscreen button"
+            id="fullscreen-img"
+          />
+        </button>
+
+        <button id="heart-button" class="double-border">
+          <img
+            src="https://img.icons8.com/?size=36&id=DFU1kReSUccu&format=png&color=000000"
+            alt="like button"
+            id="heart-img"
+          />
+        </button>
+
+        <div id="likes"></div>
+      </div>
+
+      <p id="step-message">Choose a cooking step to start.</p>
+
+      <section class="cooking-tools">
+        <div class="tool-card">
+          <h2>Ingredients Checklist</h2>
+          <p class="tool-intro">
+            Prepare the basic ingredients before following the cooking video.
+          </p>
+
+          <label><input type="checkbox" /> Chicken steak</label>
+          <label><input type="checkbox" /> Potatoes</label>
+          <label><input type="checkbox" /> Cooking oil</label>
+          <label><input type="checkbox" /> Seasoning powder</label>
+          <label><input type="checkbox" /> Pan</label>
+        </div>
+
+        <div class="tool-card">
+          <h2>Kitchen Timer</h2>
+          <p class="tool-intro">
+            Use the timer while frying or waiting before flipping the chicken.
+          </p>
+
+          <div class="timer-buttons">
+            <button id="timer-30-button" class="double-border">30s</button>
+            <button id="timer-60-button" class="double-border">1 min</button>
+            <button id="timer-120-button" class="double-border">2 min</button>
+            <button id="timer-reset-button" class="double-border">Reset</button>
+          </div>
+
+          <p id="timer-display">Time left: 00:00</p>
+          <p id="timer-message"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="msg">
+      Cooking video by
+      <a href="https://pixabay.com/users/jensb-20667/" target="_blank">jensb</a>
+      on
+      <a
+        href="https://pixabay.com/videos/schnitzel-grill-pan-flesh-food-2067/"
+        target="_blank"
+        >Pixabay</a
+      >
+      | Icons by <a href="https://icons8.com/" target="_blank">Icons8</a>
+    </footer>
+  </body>
+</html>
