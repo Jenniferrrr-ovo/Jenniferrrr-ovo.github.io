@@ -1,0 +1,10 @@
+Third-party notices for When the Show Ends
+
+GhostFibers is adapted from React Bits by David Haz (copyright 2026).
+It is used under the MIT + Commons Clause licence as part of this website.
+The component is not sold or redistributed here as a standalone component.
+Licence: https://github.com/DavidHDev/react-bits/blob/main/LICENSE.md
+Source: https://www.reactbits.dev/backgrounds/ghost-fibers
+
+OGL is distributed under the MIT licence.
+Source: https://github.com/oframe/ogl
